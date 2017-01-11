@@ -56,7 +56,7 @@ class XSSTest(unittest.TestCase):
     def result(self):
       n = 0
       for cmsg in self.driver.get_log('browser'):
-          if -1 != str(cmsg).find(" " + TESTID):
+          if -1 != str(cmsg).find(" " + TESTID_PREFIX):
             print(json.dumps(cmsg))
             n += 1
 
