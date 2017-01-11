@@ -37,7 +37,7 @@ class XSSTest(unittest.TestCase):
         chrome_options = Options()
         chrome_options.add_argument("--disable-web-security")
         chrome_options.add_argument("--disable-xss-auditor")
-        self.driver = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
+        self.driver = webdriver.Chrome(CHROMEDRIVER, chrome_options=chrome_options)
         
     def tearDown(self):
         self.driver.quit()
